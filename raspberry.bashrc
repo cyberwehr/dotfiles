@@ -20,6 +20,8 @@ alias cd..='cd ..'
 alias cls='clear'
 alias fetch='curl -O'
 
+alias nas_mount='echo "Passwort eingeben" && read pass_samba && mount -t cifs //192.168.1.5/storage /storage -o uid=0,gid=0,username=storage,password="$pass_samba" && pass_samba=""'
+
 if [ -n "$wlan_ip" ]; then
         alias nload='nload -u m U m -i 100000 -o 100000 wlan0'
 fi
